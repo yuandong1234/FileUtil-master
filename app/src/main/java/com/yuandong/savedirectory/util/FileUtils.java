@@ -86,6 +86,25 @@ public class FileUtils {
     }
 
     /**
+     *
+     * @param filePath 文件相对路径
+     * @param fileName 文件名
+     */
+    public  static void deleteFile(String filePath, String fileName){
+        try{
+            File file=new File(getRootFilePath() + filePath, fileName);
+            if(file.exists()&&file.isFile()){
+                file.delete();
+                Log.e(TAG, " file  deleted !");
+            }else{
+                Log.e(TAG, " file  not exists or is not a file !");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * @param filePath 文件相对路径
      * @param fileName 文件名
      * @param content  写入字符串

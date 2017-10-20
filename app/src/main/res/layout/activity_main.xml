@@ -21,6 +21,11 @@
             android:layout_height="wrap_content"
             android:text="创建log.txt"/>
         <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除log.txt"/>
+        <Button
             android:id="@+id/bt_write"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

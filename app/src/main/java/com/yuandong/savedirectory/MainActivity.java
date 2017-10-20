@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.yuandong.savedirectory.util.FileUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button bt_root,bt_write;
+    private Button bt_root,bt_write ,bt_delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView(){
         bt_root=(Button)findViewById(R.id.bt_root);
+        bt_delete=(Button)findViewById(R.id.bt_delete);
         bt_write=(Button)findViewById(R.id.bt_write);
+        bt_delete.setOnClickListener(this);
         bt_root.setOnClickListener(this);
         bt_write.setOnClickListener(this);
     }
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.bt_root:
                 FileUtils.crateFile(FileUtils.APP_LOG,"log.txt");
+                break;
+            case R.id.bt_delete:
+                FileUtils.deleteFile(FileUtils.APP_LOG,"log.txt");
                 break;
             case R.id.bt_write:
                 for(int i=0;i<100;i++){
