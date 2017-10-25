@@ -30,6 +30,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="字符串写入log.txt"/>
-
+        <Button
+            android:id="@+id/bt_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="读取log.txt写入字符串"/>
+        <Button
+            android:id="@+id/bt_read_assets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="读取assets文件写入字符串"/>
     </LinearLayout>
 </RelativeLayout>
